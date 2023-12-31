@@ -12,6 +12,14 @@ export const commentsDB = new mongo.Schema<CommentModel>({
     message: {
         type: String,
         require: true
+    },
+    up: {
+        type: Number,
+        default: 0
+    },
+    down: {
+        type: Number,
+        default: 0
     }
 }, {
     collection: "comments"
@@ -30,10 +38,6 @@ export const userDB = new mongo.Schema<UserModel>({
         require: true
     },
     pass: {
-        type: String,
-        require: true
-    },
-    desc: {
         type: String,
         require: true
     },
